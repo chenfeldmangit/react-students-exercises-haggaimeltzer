@@ -1,0 +1,24 @@
+body {
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.center-column {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  max-width: 36em;
+  width: 75vw;
+}
+
+/*# sourceMappingURL=page.css.map */

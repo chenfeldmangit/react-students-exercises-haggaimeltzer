@@ -1,0 +1,71 @@
+.tweet-form {
+  display: flex;
+  flex-direction: column;
+  width: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+}
+.tweet-form .tweet-input {
+  height: 4em;
+  width: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+  margin: 0.6em;
+}
+.tweet-form .tweet-form-buttons {
+  width: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.6em;
+}
+.tweet-form .tweet-form-buttons .tweet-form-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tweet-form .tweet-form-buttons .tweet-form-options .tweet-form-option {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+.tweet-form .tweet-form-buttons .tweet-form-options .tweet-form-icon-container {
+  padding: 0.6em;
+}
+.tweet-form .tweet-form-buttons .tweet-form-options .tweet-form-icon-container .tweet-form-icon {
+  height: 1.4em;
+  width: 1.4em;
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+}
+.tweet-form .tweet-form-buttons .tweet-form-options .tweet-form-icon-container:hover {
+  background-color: #e0ebff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.tweet-form .tweet-form-buttons .tweet-form-submit-btn {
+  font-size: 1.125em;
+  text-align: center;
+  line-height: 2em;
+  align-items: center;
+  height: 2em;
+  background-color: #3aabff;
+  color: white;
+  border-radius: 1.4em;
+  border-width: 0px;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+}
+.tweet-form .tweet-form-buttons .tweet-form-submit-btn:hover {
+  cursor: pointer;
+  background-color: royalblue;
+}
+
+/*# sourceMappingURL=tweet_form.css.map */

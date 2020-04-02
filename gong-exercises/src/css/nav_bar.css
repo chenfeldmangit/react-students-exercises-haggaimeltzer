@@ -1,0 +1,90 @@
+#navBar {
+  display: flex;
+  flex-direction: column;
+  min-width: 15em;
+  justify-content: left;
+}
+@media (max-width: 600px) {
+  #navBar {
+    min-width: 5em;
+  }
+  #navBar .navitem-text {
+    display: none;
+  }
+}
+#navBar .nav-item {
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 1em;
+  color: black;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  text-decoration: none;
+  border-radius: 1em;
+  padding: 0.5em;
+  line-height: 0.17em;
+  width: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+}
+#navBar .nav-item .nav-icon {
+  height: 1em;
+  width: 1em;
+}
+#navBar .nav-item:hover {
+  background-color: #e0ebff;
+}
+#navBar .nav-item:hover .svg.nav-icon {
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+}
+#navBar .nav-item .avatar {
+  border-radius: 50%;
+}
+#navBar .tweet-btn {
+  font-size: 1.125em;
+  text-align: center;
+  line-height: 2.8em;
+  align-items: center;
+  height: 2.8em;
+  width: 11em;
+  background-color: #3aabff;
+  color: white;
+  border-radius: 1.4em;
+}
+#navBar .tweet-btn:hover {
+  cursor: pointer;
+  background-color: royalblue;
+}
+#navBar .tweet-btn .tweet-icon {
+  display: none;
+}
+@media (max-width: 600px) {
+  #navBar .tweet-btn .tweet-icon {
+    display: inline;
+  }
+}
+#navBar .tweet-btn .tweet-btn-text {
+  filter: brightness(0) invert(1);
+}
+@media (max-width: 600px) {
+  #navBar .tweet-btn .tweet-btn-text {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  #navBar .tweet-btn {
+    width: 2.8em;
+  }
+}
+
+#twIcon {
+  height: 2em;
+  width: 2em;
+  margin-left: 0.6em;
+  /* fill: cornflowerblue; */
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
+/*# sourceMappingURL=nav_bar.css.map */

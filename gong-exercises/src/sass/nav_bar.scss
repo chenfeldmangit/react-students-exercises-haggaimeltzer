@@ -1,0 +1,86 @@
+@use 'commons/layouts' as layout;
+@use 'commons/colors' as color;
+
+$nav-items-font-size : 1.5em;
+$nav-items-padding : 0.5em;
+
+#navBar{
+    @include layout.flexColumn;
+    min-width: 15em;
+    justify-content: left;
+    @media (max-width: 600px) {
+        min-width: 5em;
+        .navitem-text{
+            display: none;
+        }
+    }
+   
+    .nav-item {
+        font-size: $nav-items-font-size;
+        font-weight: bold;
+        height: 1em;
+        color: color.$text-color;
+        margin-top: 0.1em;
+        margin-bottom: 0.1em;
+        text-decoration: none;
+        border-radius: 1em;
+        padding: $nav-items-padding;
+        line-height: 0.17em;
+        @include layout.fill-available-width;
+        .nav-icon {
+            height: 1em;
+            width: 1em;
+        }
+
+        &:hover{
+            background-color: color.$hover-bg-color;
+            .svg.nav-icon{
+                filter: color.$primary-color-filter;
+            }
+        }
+        
+        .avatar{
+            border-radius: 50%;
+        }
+    }
+
+    .tweet-btn {
+
+        font-size: 1.125em;
+        text-align:center;
+        line-height: 2.8em;
+        align-items: center;
+        height: 2.8em;
+        width: 11em;
+        background-color: color.$primary-color;
+        color: white;
+        border-radius: 1.4em;    
+        &:hover{
+            cursor: pointer;
+            background-color: color.$primary-color-hover;
+        }
+        .tweet-icon{
+            display: none;
+            @media (max-width: 600px) {
+                display: inline;
+            }    
+        }
+        .tweet-btn-text{
+            filter: color.$white-color-filter;
+            @media (max-width: 600px) {
+                display: none;
+            }    
+        }
+        @media (max-width: 600px) {
+            width: 2.8em;
+        }
+    }
+}
+
+#twIcon {
+    height: 2em;
+    width: 2em;
+    margin-left: 0.6em;
+    /* fill: cornflowerblue; */
+    filter: color.$primary-color-filter;
+}

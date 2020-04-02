@@ -1,0 +1,106 @@
+@use 'commons/layouts' as layout;
+@use 'commons/colors' as color;
+
+$feed-padding: 0.6em;
+
+#profile-container{
+    display: none;
+    flex-direction: column;
+    background-color: color.$bg-color;
+    #profile-top{
+        @include layout.flexColumn;
+        @include layout.align-right;
+        position: relative;
+        background-color: white;
+
+        .bg-img-container{
+            width: 75vw;
+            height: 25vw;
+            max-height: 12em;
+            max-width: 36em;
+            overflow: hidden;
+            position: relative;
+            .background-img{
+                position: absolute;
+                left: -1000%;
+                right: -1000%;
+                top: -1000%;
+                bottom: -1000%;
+                margin: auto;
+                min-height: 100%;
+                min-width: 100%;
+            }
+        }   
+
+        .my-profile-img{
+            width: 5em;
+            height: 5em;
+            position: absolute;
+            bottom: 0; 
+            left:0;
+            margin: $feed-padding;
+            border-radius: 50%;
+            border-color: white;
+            border-width: thick;
+            border-style: solid;
+        }
+        #edit-profile-btn{
+            @include layout.fit-content;
+            text-align: center;
+            line-height: 2em;
+            align-items: center;
+            height: 2em;
+            background-color: white;
+            color: color.$primary-color;
+            border-radius: 1.4em;
+            padding-left: 0.7em;
+            padding-right: 0.7em;
+            border-style: solid;
+            border-width: 0.5px;
+            border-color: color.$primary-color;
+            font-weight: bold;
+            margin: $feed-padding;
+        }
+    }
+    .profile-title{
+        @include layout.flexColumn;  
+        color: color.$text-light-color;
+        margin: $feed-padding;
+        .username{
+            font-weight: bold;
+            font-size: 1.2em;
+            color: color.$text-color;
+        }
+        .joinedTime{
+            margin-top: $feed-padding;
+        }
+    }
+
+    .profile-followers-container{
+        margin: $feed-padding;
+        color: color.$text-light-color;
+        .numFollowing{
+            font-weight: bold;
+            color: color.$text-color;
+        }
+        .numFollowers{
+            margin-left: $feed-padding;;
+            font-weight: bold;
+            color: color.$text-color;
+        }
+    }
+}
+
+#my-activities{
+    display: none;
+    flex-direction: column;
+    background-color: color.$bg-color;
+    .my-activity-nav-bar{
+        margin: $feed-padding;
+        @include layout.flexRow;        
+        .my-activity-nav-item{
+            color: color.$primary-color;
+            border-bottom: 1px solid color.$primary-color;
+        }
+    }
+}

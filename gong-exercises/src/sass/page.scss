@@ -1,0 +1,21 @@
+@use 'commons/layouts' as layout;
+@use 'commons/colors' as color;
+
+body{
+    font-size: 16px;
+    @include layout.margin-auto;
+    margin-top: 0px;
+}
+
+.main-layout{
+    @include layout.flexRow;
+    @include layout.margin-auto;
+    justify-content: center;
+}
+
+.center-column {
+    @include layout.flexColumn;
+    background-color: color.$center-column-bg;
+    max-width: 36em;
+    width: 75vw;
+}

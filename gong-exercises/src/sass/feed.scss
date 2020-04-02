@@ -1,0 +1,92 @@
+@use 'commons/layouts' as layout;
+@use 'commons/colors' as color;
+
+$feed-padding: 0.6em;
+$profile-diameter: 3.5em;
+
+.feed {
+    @include layout.flexColumn;
+}
+
+.feed-item {
+    @include layout.flexRow;
+    background-color: color.$bg-color;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding: $feed-padding;
+    justify-content: space-evenly;
+
+    .feed-profile-img {
+        height: $profile-diameter;
+        width: $profile-diameter;
+        border-radius: 50%;
+        border: color.$primary-color;
+        margin: $feed-padding;
+    }
+
+    .tweet-item {
+        margin-bottom: 1em;
+        @include layout.fill-available-width;
+
+        .tweet-inner-item{
+            margin: $feed-padding;
+        }
+
+        .tw-username{
+            text-decoration: none;  
+
+            .username{
+                color: color.$text-color;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .twitterhandle{
+                color: color.$text-light-color;
+                text-decoration: none;
+            }
+        }
+        
+        .tweet-timestamp{
+            color: color.$text-light-color;
+            text-decoration: none;
+        }
+        
+        .tweet-image {
+           @include layout.fill-available-width;
+        }
+
+        .tweet-actions{
+            @include layout.flexRow;
+            justify-content: space-between;
+            margin: $feed-padding;
+            
+            .tweet-action{
+                @include layout.flexRow;
+
+                .tweet-action-counter{
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+                
+                .tweet-action-icon-container{
+                    padding: 0.2em;
+                    cursor: pointer;
+                    .tweet-action-icon{
+                        height: 1em;
+                        width: 1em;
+                    }
+                    &:hover{
+                        background-color: color.$hover-bg-color;
+                        border-radius: 50%;
+                        .tweet-action-icon{
+                            filter: color.$primary-color-filter;
+                        }
+                    }
+                  
+                }
+            }
+        }
+    }
+    
+}

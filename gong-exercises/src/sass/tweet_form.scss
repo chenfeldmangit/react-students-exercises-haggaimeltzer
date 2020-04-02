@@ -1,0 +1,68 @@
+@use 'commons/layouts' as layout;
+@use 'commons/colors' as color;
+
+.tweet-form {
+    @include layout.flexColumn;
+    @include  layout.fill-available-width;  
+        
+    .tweet-input {
+        height: 4em;
+        @include  layout.fill-available-width;  
+        margin: 0.6em;
+    }
+    
+    .tweet-form-buttons {
+        @include  layout.fill-available-width;  
+        @include layout.flexRow;
+        justify-content: space-between;
+        margin: 0.6em;
+
+                
+        .tweet-form-options {
+            @include layout.flexRow;
+            justify-content: space-between;
+
+            .tweet-form-option {
+                cursor: pointer;
+                @include layout.flexRow;
+            }
+                        
+
+            .tweet-form-icon-container {
+                padding: 0.6em;
+                
+                .tweet-form-icon {
+                    height: 1.4em;
+                    width: 1.4em;
+                    filter: invert(.5) sepia(1) saturate(5) hue-rotate(175deg);
+                }
+
+                &:hover {
+                    background-color: rgb(224, 235, 255);
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+
+
+        }
+                
+        .tweet-form-submit-btn {
+            font-size: 1.125em;
+            text-align: center;
+            line-height: 2em;
+            align-items: center;
+            height: 2em;
+            background-color: #3aabff;
+            color: white;
+            border-radius: 1.4em;
+            border-width: 0px;
+            padding-left: 0.7em;
+            padding-right: 0.7em;
+            &:hover {
+                cursor: pointer;
+                background-color: royalblue;
+            }
+        }
+    }
+}
