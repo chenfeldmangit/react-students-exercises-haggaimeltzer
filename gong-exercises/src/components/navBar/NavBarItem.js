@@ -38,8 +38,9 @@ export default class NavBarItem extends React.Component {
 
     render() {
       return (
+        // eslint-disable-next-line
         <a className="nav-item" onClick={this.onClicked()}>
-            <img className="svg nav-icon" src={this.getIcon()} />
+            <img className="svg nav-icon" src={this.getIcon()} alt={this.getName()}/>
             <span className="navitem-text"> {this.props.name} </span>
         </a>
       );

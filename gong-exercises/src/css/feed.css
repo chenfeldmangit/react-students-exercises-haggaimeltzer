@@ -25,7 +25,7 @@
   /* WebKit-based browsers will ignore this. */
   width: -webkit-fill-available;
   /* Mozilla-based browsers will ignore this. */
-  width: fill-available;
+  width: stretch;
 }
 .feed-item .tweet-item .tweet-inner-item {
   margin: 0.6em;
@@ -51,7 +51,7 @@
   /* WebKit-based browsers will ignore this. */
   width: -webkit-fill-available;
   /* Mozilla-based browsers will ignore this. */
-  width: fill-available;
+  width: stretch;
 }
 .feed-item .tweet-item .tweet-actions {
   display: flex;

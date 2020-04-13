@@ -7,7 +7,7 @@ export default class NavBar extends React.Component {
       return (
         <nav id="navBar">
              <a href="/index.html">
-                <img id="twIcon" className="svg"  src="./assets/twitter_logo.svg" />
+                <img id="twIcon" className="svg"  src="./assets/twitter_logo.svg" alt="logo"/>
             </a>  
             <NavBarItem name="Home"></NavBarItem>
             <NavBarItem name="Explore"></NavBarItem>
