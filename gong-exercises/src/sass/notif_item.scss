@@ -1,0 +1,34 @@
+@use 'commons/layouts' as layout;
+@use 'commons/colors' as color;
+
+$feed-padding: 0.6em;
+$profile-diameter: 3.5em;
+
+.notification-item {
+    @include layout.flexColumn;
+    background-color: color.$bg-color;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding: $feed-padding;
+    justify-content: space-evenly;
+
+    .notification-avatars{
+        @include layout.flexRow;
+    }
+
+    .notification-img {
+        height: $profile-diameter;
+        width: $profile-diameter;
+        border-radius: 50%;
+        border: color.$primary-color;
+        margin: $feed-padding;
+    }
+
+    .notification-title{
+        color: color.$text-color;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: left;
+    }
+
+}
