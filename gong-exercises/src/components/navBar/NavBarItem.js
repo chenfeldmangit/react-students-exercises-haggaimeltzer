@@ -1,16 +1,23 @@
 import React from 'react';
 //import homeSvg from './assets/home_icon.svg'
+import HomeLogo from '../../assets/home_icon.svg';
+import ExploreLogo from '../../assets/explore_icon.svg';
+import NotificationsLogo from '../../assets/notifications_icon.svg';
+import MessagesLogo from '../../assets/messages_icon.svg';
+import BookmarksLogo from '../../assets/bookmarks_icon.svg';
+import ListsLogo from '../../assets/list_icon.svg';
+import MoreLogo  from '../../assets/more.svg';
 
 export default class NavBarItem extends React.Component {
     static nameToIcon ={
-        Home: "./assets/home_icon.svg", //{homeSvg}
-        Explore: "./assets/explore_icon.svg",
-        Notifications: "./assets/notifications_icon.svg",
-        Messages: "./assets/messages_icon.svg",
-        Bookmarks: "./assets/bookmarks_icon.svg",
-        Lists: "./assets/list_icon.svg",
-        Profile: "https://pbs.twimg.com/profile_images/475721381443670016/-Usuvy6t_normal.jpeg",
-        More: "./assets/more.svg",
+        Home: HomeLogo,
+        Explore: ExploreLogo,
+        Notifications:NotificationsLogo,
+        Messages: MessagesLogo,
+        Bookmarks:BookmarksLogo,
+        Lists: ListsLogo,
+        Profile: 'https://pbs.twimg.com/profile_images/475721381443670016/-Usuvy6t_normal.jpeg',
+        More:MoreLogo,
     };
 
     static nameToText ={

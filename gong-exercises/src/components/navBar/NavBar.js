@@ -1,13 +1,14 @@
 import React from 'react';
 import NavBarItem from './NavBarItem';
 import '../../css/nav_bar.css';
+import logoSvg from '../../assets/twitter_logo.svg'
 
 export default class NavBar extends React.Component {
     render() {
       return (
         <nav id="navBar">
              <a href="/index.html">
-                <img id="twIcon" className="svg"  src="./assets/twitter_logo.svg" alt="logo"/>
+                <img id="twIcon" className="svg"  src={logoSvg} alt="logo"/>
             </a>  
             <NavBarItem name="Home"></NavBarItem>
             <NavBarItem name="Explore"></NavBarItem>

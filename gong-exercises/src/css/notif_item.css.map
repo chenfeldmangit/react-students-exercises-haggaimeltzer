@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../sass/notif_item.scss","../sass/commons/_layouts.scss","../sass/commons/_colors.scss"],"names":[],"mappings":"AAMA;ECLI;EACA;EDMA,kBENO;EFOP;EACA;EACA,SARW;EASX;;AAEA;ECRA;EACA;;ADWA;EACI,QAfW;EAgBX,OAhBW;EAiBX;EACA,QEtBQ;EFuBR,QApBO;;AAuBX;EACI,OExBK;EFyBL;EACA;EACA","file":"notif_item.css"}
