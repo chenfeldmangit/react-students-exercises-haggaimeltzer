@@ -5,8 +5,8 @@ import NewsFeedContainer from './components/tweetsFeed/NewsFeedContainer'
 import UserProfile from './components/profile/UserProfileContainer'
 import NotificationsContainer from './components/Notifications/NotificationsContainer'
 import './App.css';
+//import './sass/page.sass'; //makes error Invalid CSS after "...@include layout": expected "}", was ".margin-auto;"
 import './css/page.css';
-
 
 function App() {
   return (

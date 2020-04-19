@@ -1,15 +1,8 @@
 import React from 'react';
-//import homeSvg from './assets/home_icon.svg'
-import HomeLogo from '../../assets/home_icon.svg';
-import ExploreLogo from '../../assets/explore_icon.svg';
-import NotificationsLogo from '../../assets/notifications_icon.svg';
-import MessagesLogo from '../../assets/messages_icon.svg';
-import BookmarksLogo from '../../assets/bookmarks_icon.svg';
-import ListsLogo from '../../assets/list_icon.svg';
-import MoreLogo  from '../../assets/more.svg';
+import NavBarAssets from '../../assets/NavBarAssets';
 
 export default class NavBarItem extends React.Component {
-    static nameToIcon ={
+    /* static nameToIcon ={
         Home: HomeLogo,
         Explore: ExploreLogo,
         Notifications:NotificationsLogo,
@@ -31,12 +24,27 @@ export default class NavBarItem extends React.Component {
       More: "More...",
   };
 
+  static nameToRef ={
+    Home: "/",
+    Explore: "/Explore",
+    Notifications: "/Notifications",
+    Messages: "/Messages",
+    Bookmarks: "/Bookmarks",
+    Lists: "/Lists",
+    Profile: "/Profile",
+    More: "More...",
+}; */
+
     getIcon = ()=>{
-        return NavBarItem.nameToIcon[this.props.name];
+        return NavBarAssets.getItemIcon(this.props.name);
     };
 
     getName = ()=>{
-      return NavBarItem.nameToText[this.props.name];
+      return NavBarAssets.getItemText(this.props.name);
+  };
+
+  getRef = ()=>{
+      return NavBarAssets.getItemRef(this.props.name);
   };
 
     onClicked = ()=>{
@@ -46,8 +54,8 @@ export default class NavBarItem extends React.Component {
     render() {
       return (
         // eslint-disable-next-line
-        <a className="nav-item" onClick={this.onClicked()}>
-            <img className="svg nav-icon" src={this.getIcon()} alt={this.getName()}/>
+        <a className="nav-item" href={this.getRef()} onClick={this.onClicked()}>
+            <img className="svg-img nav-icon" src={this.getIcon()} alt={this.getName()}/>
             <span className="navitem-text"> {this.props.name} </span>
         </a>
       );

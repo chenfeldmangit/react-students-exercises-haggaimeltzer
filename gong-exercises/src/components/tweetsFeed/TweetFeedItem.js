@@ -51,25 +51,25 @@ export default function TweetFeedItem(props){
             <div className="tweet-actions tweet-inner-item">
                 <div className="tweet-action">
                     <div className="tweet-action-icon-container">
-                        <img className="svg tweet-action-icon" alt="comment" src="./assets/comment_icon.svg" />
+                        <img className="svg-img tweet-action-icon" alt="comment" src="./assets/comment_icon.svg" />
                     </div>
                     <div className="tweet-action-counter comment_counter"> 0</div>
                 </div>
                 <div className="tweet-action">
                     <div className="tweet-action-icon-container">
-                        <img className="svg tweet-action-icon" alt="retweet" src="./assets/retweet_icon.svg" />
+                        <img className="svg-img tweet-action-icon" alt="retweet" src="./assets/retweet_icon.svg" />
                     </div>
                     <div className="tweet-action-counter retweet_counter"> 0</div>
                 </div>
                 <div className="tweet-action">
                     <div className="tweet-action-icon-container">
-                        <img className="svg tweet-action-icon like_icon" src="./assets/like_icon.svg" onClick={onlike} alt="like" />
+                        <img className="svg-img tweet-action-icon like_icon" src="./assets/like_icon.svg" onClick={onlike} alt="like" />
                     </div>
                     <div className="tweet-action-counter like_counter"> 0</div>
                 </div>
                 <div className="tweet-action">
                     <div className="tweet-action-icon-container">
-                        <img className="svg tweet-action-icon" alt="share" src="./assets/share_icon.svg" />
+                        <img className="svg-img tweet-action-icon" alt="share" src="./assets/share_icon.svg" />
                     </div>
                 </div>
             </div>

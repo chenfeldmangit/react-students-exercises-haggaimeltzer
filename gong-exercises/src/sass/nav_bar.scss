@@ -34,7 +34,7 @@ $nav-items-padding : 0.5em;
 
         &:hover{
             background-color: color.$hover-bg-color;
-            .svg.nav-icon{
+            .svg-img.nav-icon{
                 filter: color.$primary-color-filter;
             }
         }

@@ -36,7 +36,7 @@
 #navBar .nav-item:hover {
   background-color: #e0ebff;
 }
-#navBar .nav-item:hover .svg.nav-icon {
+#navBar .nav-item:hover .svg-img.nav-icon {
   filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
 }
 #navBar .nav-item .avatar {

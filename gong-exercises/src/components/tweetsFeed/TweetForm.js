@@ -25,7 +25,7 @@ export default function TweetForm(props){
                     <div className="tweet-form-options">
                         <div className="tweet-form-option">
                             <div className="tweet-form-icon-container">
-                                <img className="svg tweet-form-icon" src="./assets/picture_icon.svg"  alt="tweet"/>
+                                <img className="svg-img tweet-form-icon" src="./assets/picture_icon.svg"  alt="tweet"/>
                             </div>
                         </div>
                     </div>
