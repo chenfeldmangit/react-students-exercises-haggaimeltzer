@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import TweetsApi from '../../db/TweetsAPI'
 import '../../css/tweet_form.css'
+import picture_icon from '../../assets/picture_icon.svg';
+ 
 
 export default function TweetForm(props){
     const [text, setText] = useState('');
@@ -25,7 +27,7 @@ export default function TweetForm(props){
                     <div className="tweet-form-options">
                         <div className="tweet-form-option">
                             <div className="tweet-form-icon-container">
-                                <img className="svg-img tweet-form-icon" src="./assets/picture_icon.svg"  alt="tweet"/>
+                                <img className="svg-img tweet-form-icon" src={picture_icon}  alt="tweet"/>
                             </div>
                         </div>
                     </div>

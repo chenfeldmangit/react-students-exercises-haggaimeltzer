@@ -15,7 +15,7 @@ function App() {
         <div className="main-layout">
           <NavBar /> 
           <div className="center-column">
-            <switch>
+            <Switch>
               <Route path="/" component={() => <NewsFeedContainer/>} exact/>
               <Route path="/profile" component={UserProfile}/>
               <Route path="/notifications" component={NotificationsContainer}/>
@@ -23,7 +23,7 @@ function App() {
               {/* <TweetForm/> 
               <NewsFeed/> 
               <NotificationsFeed/> */}
-            </switch>
+            </Switch>
           </div>
         </div>
       </div>
