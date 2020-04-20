@@ -1,5 +1,5 @@
 
-export default class NotificationsApi{
+export default class UserProfileApi{
     static async getProfileData(){
         return profile_data;
     };

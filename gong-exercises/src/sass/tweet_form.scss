@@ -62,7 +62,10 @@
             &:hover {
                 cursor: pointer;
                 background-color: royalblue;
-            }
+            }          
+            &:disabled {
+                background-color: gray;
+            } 
         }
     }
 }

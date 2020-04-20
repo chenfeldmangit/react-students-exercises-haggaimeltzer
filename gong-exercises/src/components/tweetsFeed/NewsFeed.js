@@ -9,6 +9,7 @@ export default function NewsFeed(props){
     useEffect(()=> {
         async function loadContent() {
             const result = await TweetsApi.getTweets();
+            result.reverse();
             setTweets(result);
           }
           loadContent();

@@ -17,12 +17,20 @@ export default function TweetForm(props){
         return true;
     }
 
+    function onTweetInputChange(event){
+        setText(event.text);
+    };
+
+    useEffect(()=>{
+        
+    }, [text]);
+
     return (
         <div id="tweet-form-container" className="feed-item tweet-item">
             <img className="feed-profile-img" alt="profile"
                 src="https://pbs.twimg.com/profile_images/475721381443670016/-Usuvy6t_normal.jpeg"/>
             <form id="tweet-form" className="tweet-form"  onSubmit={onTweetFormSubmit}>
-                <input className="tweet-input" type="text" id="tweetInput" name="tweetInput" required/>
+                <input className="tweet-input" type="text" id="tweetInput" name="tweetInput" onChange={onTweetInputChange} required/>
                 <div className="tweet-form-buttons">
                     <div className="tweet-form-options">
                         <div className="tweet-form-option">
@@ -31,7 +39,11 @@ export default function TweetForm(props){
                             </div>
                         </div>
                     </div>
-                    <input className="tweet-form-submit-btn" type="submit" value="Tweet"/>
+                    {(text?.length<3)?
+                        <input className="tweet-form-submit-btn" type="submit" value="Tweet"  disabled/>
+                        :
+                        <input className="tweet-form-submit-btn" type="submit" value="Tweet"/>
+                    }
                 </div>
             </form>
         </div>

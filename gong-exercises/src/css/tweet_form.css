@@ -67,5 +67,8 @@
   cursor: pointer;
   background-color: royalblue;
 }
+.tweet-form .tweet-form-buttons .tweet-form-submit-btn:disabled {
+  background-color: gray;
+}
 
 /*# sourceMappingURL=tweet_form.css.map */

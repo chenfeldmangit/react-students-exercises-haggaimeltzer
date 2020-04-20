@@ -4,9 +4,12 @@ import NavBar from './components/navBar/NavBar'
 import NewsFeedContainer from './components/tweetsFeed/NewsFeedContainer'
 import UserProfile from './components/profile/UserProfileContainer'
 import NotificationsContainer from './components/Notifications/NotificationsContainer'
-import './App.css';
+import SignupContainer from './components/login/SignupContainer'
+import LoginContainer from './components/login/LoginContainer'
+import './css/App.css';
 //import './sass/page.sass'; //makes error Invalid CSS after "...@include layout": expected "}", was ".margin-auto;"
 import './css/page.css';
+
 
 function App() {
   return (
@@ -19,6 +22,8 @@ function App() {
               <Route path="/" component={() => <NewsFeedContainer/>} exact/>
               <Route path="/profile" component={UserProfile}/>
               <Route path="/notifications" component={NotificationsContainer}/>
+              <Route path="/signup" component={() => <SignupContainer/>} exact/>
+              <Route path="/login" component={() => <LoginContainer/>} exact/>
               {/* <Route component={PageNotFound}/>  */}
               {/* <TweetForm/> 
               <NewsFeed/> 
