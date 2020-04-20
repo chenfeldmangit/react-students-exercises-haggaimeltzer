@@ -1,4 +1,3 @@
-import React from 'react';
 import HomeLogo from '../assets/home_icon.svg';
 import ExploreLogo from '../assets/explore_icon.svg';
 import NotificationsLogo from '../assets/notifications_icon.svg';

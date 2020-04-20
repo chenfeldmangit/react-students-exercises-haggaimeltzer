@@ -1,7 +1,7 @@
 
 export default class LoginActions{
     static LOGIN = 'LOGIN';
-    static LOGOUT = 'LOGIN';
+    static LOGOUT = 'LOGOUT';
     static createLoggedInAction(username) {
         return {
             type: LoginActions.LOGIN,

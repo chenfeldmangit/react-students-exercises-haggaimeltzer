@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import UserAPI from '../../db/userAPI'
 //import store from '../../common/store'
 import LoginActions from '../../actions/login_actions';
+import {connect} from 'react-redux';
 
-export default function LoginSignForm(props){
+function LoginSignForm(props){
     let {type} = props;
     /*const [tweets, setTweets] = useState([]);
 
@@ -59,3 +60,27 @@ export default function LoginSignForm(props){
         </form>
     );
 }
+
+
+
+const mapStateToProps = (state)=>{
+    return { 
+        loginData: state.loginData,
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onLoggedIn: username=>{
+            dispatch(LoginActions.createLoggedInAction(username));
+        },
+        onLoggedOut: username=>{
+            dispatch(LoginActions.createLoggedOutAction(username));
+        }
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(LoginSignForm);

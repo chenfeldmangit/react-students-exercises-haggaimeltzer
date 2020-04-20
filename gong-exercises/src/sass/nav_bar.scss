@@ -8,6 +8,7 @@ $nav-items-padding : 0.5em;
     @include layout.flexColumn;
     min-width: 15em;
     justify-content: left;
+    text-align: left;
     @media (max-width: 600px) {
         min-width: 5em;
         .navitem-text{
@@ -18,7 +19,6 @@ $nav-items-padding : 0.5em;
     .nav-item {
         font-size: $nav-items-font-size;
         font-weight: bold;
-        height: 1em;
         color: color.$text-color;
         margin-top: 0.1em;
         margin-bottom: 0.1em;
@@ -26,6 +26,9 @@ $nav-items-padding : 0.5em;
         border-radius: 1em;
         padding: $nav-items-padding;
         line-height: 0.17em;
+        text-align: left;
+        background-color: transparent;
+        border-color: transparent;
         @include layout.fill-available-width;
         .nav-icon {
             height: 1em;
@@ -38,9 +41,17 @@ $nav-items-padding : 0.5em;
                 filter: color.$primary-color-filter;
             }
         }
-        
+       
         .avatar{
             border-radius: 50%;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &::after {
+            display: none;
         }
     }
 

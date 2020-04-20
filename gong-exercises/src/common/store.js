@@ -1,8 +1,10 @@
 import {createStore, combineReducers} from 'redux'
 import loginReducer from '../reducers/LoginReducer'
+import tweetsReducer from '../reducers/TweetsReducer';
 
 const combinedReducers = combineReducers({
-    login: loginReducer
+    login: loginReducer,
+    tweets: tweetsReducer,
 });
 
 

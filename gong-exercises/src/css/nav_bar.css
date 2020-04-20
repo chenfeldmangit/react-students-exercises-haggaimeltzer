@@ -3,6 +3,7 @@
   flex-direction: column;
   min-width: 15em;
   justify-content: left;
+  text-align: left;
 }
 @media (max-width: 600px) {
   #navBar {
@@ -15,7 +16,6 @@
 #navBar .nav-item {
   font-size: 1.5em;
   font-weight: bold;
-  height: 1em;
   color: black;
   margin-top: 0.1em;
   margin-bottom: 0.1em;
@@ -23,6 +23,9 @@
   border-radius: 1em;
   padding: 0.5em;
   line-height: 0.17em;
+  text-align: left;
+  background-color: transparent;
+  border-color: transparent;
   width: -moz-available;
   /* WebKit-based browsers will ignore this. */
   width: -webkit-fill-available;
@@ -41,6 +44,12 @@
 }
 #navBar .nav-item .avatar {
   border-radius: 50%;
+}
+#navBar .nav-item:focus {
+  box-shadow: none;
+}
+#navBar .nav-item::after {
+  display: none;
 }
 #navBar .tweet-btn {
   font-size: 1.125em;

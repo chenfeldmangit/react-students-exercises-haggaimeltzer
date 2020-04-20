@@ -12,23 +12,23 @@ export default function UserProfileContainer(props){
     return (
         <div id="profile-container" >
             <div id="profile-top">
-                <div class="bg-img-container">
-                    <img class="background-img" />
+                <div className="bg-img-container">
+                    <img className="background-img" />
                 </div>
                 <button id="edit-profile-btn">
                     Edit profile
                 </button>
-                <img class="my-profile-img" />
+                <img className="my-profile-img" />
             </div>
             
-            <div class="profile-title">
-                <span class="username">Username</span>
-                <span class="twitterhandle">@twitterhandle </span>
-                <span  class="joinedTime"> time </span> 
+            <div className="profile-title">
+                <span className="username">Username</span>
+                <span className="twitterhandle">@twitterhandle </span>
+                <span  className="joinedTime"> time </span> 
             </div>
-            <div class="profile-followers-container">
-                <span class="numFollowing"> 5 </span><span> following</span>
-                <span class="numFollowers"> 50000 </span> <span>followers</span>
+            <div className="profile-followers-container">
+                <span className="numFollowing"> 5 </span><span> following</span>
+                <span className="numFollowers"> 50000 </span> <span>followers</span>
             </div>
         </div>
     );

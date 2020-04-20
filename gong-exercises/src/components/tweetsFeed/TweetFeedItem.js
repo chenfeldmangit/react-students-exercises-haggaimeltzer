@@ -6,7 +6,7 @@ import LkeIcon from '../../assets/like_icon.svg'
 import SharetIcon from '../../assets/share_icon.svg'
 
 export default function TweetFeedItem(props){
-    const [tweet] = useState({});
+    //const [tweet] = useState({});
     const {tweetData} = props;
        
 
