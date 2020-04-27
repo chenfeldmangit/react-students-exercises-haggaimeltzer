@@ -5,12 +5,22 @@ body {
   margin-top: 0px;
 }
 
-.main-layout {
+#mainLayout {
   display: flex;
   flex-direction: row;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
+}
+
+#mainLayout.layout-row {
+  display: flex;
+  flex-direction: row;
+}
+
+#mainLayout.layout-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .center-column {

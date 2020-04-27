@@ -54,9 +54,7 @@
 #navBar .tweet-btn {
   font-size: 1.125em;
   text-align: center;
-  line-height: 2.8em;
   align-items: center;
-  height: 2.8em;
   width: 11em;
   background-color: #3aabff;
   color: white;
@@ -86,6 +84,30 @@
   #navBar .tweet-btn {
     width: 2.8em;
   }
+}
+
+#navBar.navbar-row {
+  display: flex;
+  flex-direction: row;
+}
+#navBar.navbar-row .nav-item {
+  width: 5em;
+  font-size: 1.125em;
+  text-align: center;
+  line-height: 1em;
+  align-items: center;
+  background-color: #3aabff;
+  color: white;
+  border-radius: 1.4em;
+  margin-left: 1em;
+}
+#navBar.navbar-row .nav-item:hover {
+  cursor: pointer;
+  background-color: royalblue;
+}
+
+#a-logo {
+  padding: 0.5em;
 }
 
 #twIcon {

@@ -7,6 +7,7 @@ import NotificationsContainer from './components/Notifications/NotificationsCont
 import SignupContainer from './components/login/SignupContainer'
 import LoginContainer from './components/login/LoginContainer'
 import LogoutContainer from './components/login/LogoutContainer'
+import MainLayout from './components/MainLayout'
 import './css/App.css';
 //import './sass/page.sass'; //makes error Invalid CSS after "...@include layout": expected "}", was ".margin-auto;"
 import './css/page.css';
@@ -16,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <div className="main-layout">
+        <MainLayout className="main-layout">
             <NavBar />
           <div className="center-column">
             <Switch>
@@ -33,7 +34,7 @@ function App() {
               <NotificationsFeed/> */}
             </Switch>
           </div>
-        </div>
+        </MainLayout>
       </div>
     </BrowserRouter>
   );

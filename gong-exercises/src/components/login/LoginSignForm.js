@@ -22,6 +22,10 @@ function LoginSignForm(props){
         //store.dispatch(LoginActions.creatLoggedInAction(username));
     }
 
+    function getSubmitText(){
+       return type;
+    }
+
     async function onFormSubmit(event){
         event.preventDefault();
         console.log(type + " submitted");
@@ -32,6 +36,11 @@ function LoginSignForm(props){
             case "signup":
                { let ok = await UserAPI.signup(inputs.usernameInput.value, inputs.passwordInput.value);
                     console.log("signup" + (ok? " succeeded" : " failed"));
+                    if(ok){
+                    }
+                    else{
+                        alert("signup failed");
+                    }                
                     break;
                }
             case "login":
@@ -41,6 +50,9 @@ function LoginSignForm(props){
                     console.log("login" + (ok? " succeeded" : " failed"));
                     if(ok){
                         onLoggedIn(username);
+                    }
+                    else{
+                        alert("bad username or password");
                     }
                     break;
                 }
@@ -54,9 +66,9 @@ function LoginSignForm(props){
 
     return (
         <form id="login-form" className="login-form"  onSubmit={onFormSubmit}>
-            <input className="username" type="text" id="usernameInput" name="usernameInput" required/>
-            <input className="password" type="password" id="passwordInput" name="passwordInput"  required/>
-            <input className="login-submit-btn" type="submit"/>
+            <input className="username" type="text" id="usernameInput" name="usernameInput" placeholder="username" required/>
+            <input className="password" type="password" id="passwordInput" name="passwordInput"  placeholder="password" required/>
+            <input className="login-submit-btn" type="submit" value={getSubmitText()}/>
         </form>
     );
 }
@@ -75,7 +87,7 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(LoginActions.createLoggedInAction(username));
         },
         onLoggedOut: username=>{
-            dispatch(LoginActions.createLoggedOutAction(username));
+            dispatch(LoginActions.createLoggedOutAction());
         }
     }
 }

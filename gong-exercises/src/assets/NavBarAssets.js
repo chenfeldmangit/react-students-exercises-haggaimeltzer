@@ -17,6 +17,8 @@ export default class NavBarAssets{
         Lists: ["Lists",ListsLogo, "/Lists"],
         Profile: ["Profile", 'https://pbs.twimg.com/profile_images/475721381443670016/-Usuvy6t_normal.jpeg',  "/Profile"],
         More: ["More...", MoreLogo],
+        Login: ["Login", null, "/Login"],
+        Signup: ["Signup", null, "/Signup"]
     };
 
     static getItemText(name){

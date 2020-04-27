@@ -7,11 +7,19 @@ body{
     margin-top: 0px;
 }
 
-.main-layout{
+#mainLayout{
     @include layout.flexRow;
     @include layout.margin-auto;
     justify-content: center;
 }
+#mainLayout.layout-row{
+    @include layout.flexRow;
+}
+
+#mainLayout.layout-column{
+    @include layout.flexColumn;
+}
+
 
 .center-column {
     @include layout.flexColumn;

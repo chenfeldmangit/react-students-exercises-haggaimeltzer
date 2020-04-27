@@ -59,9 +59,7 @@ $nav-items-padding : 0.5em;
 
         font-size: 1.125em;
         text-align:center;
-        line-height: 2.8em;
         align-items: center;
-        height: 2.8em;
         width: 11em;
         background-color: color.$primary-color;
         color: white;
@@ -87,6 +85,30 @@ $nav-items-padding : 0.5em;
         }
     }
 }
+
+#navBar.navbar-row{
+    @include layout.flexRow;
+    .nav-item {
+        width: 5em;
+        font-size: 1.125em;
+        text-align:center;
+        line-height: 1em;
+        align-items: center;
+        background-color: color.$primary-color;
+        color: white;
+        border-radius: 1.4em;    
+        &:hover{
+            cursor: pointer;
+            background-color: color.$primary-color-hover;
+        }     
+        margin-left: 1em;   
+    }
+}
+
+#a-logo{
+  padding: $nav-items-padding;  
+}
+
 
 #twIcon {
     height: 2em;
