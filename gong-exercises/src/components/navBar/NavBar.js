@@ -12,10 +12,9 @@ class NavBar extends React.Component {
     }
 
     render() {
-        const { loggedInUser } = this.props;
-
+        const loggedInUser = localStorage.getItem("logged-in-user");
         return (
-            <nav id="navBar" className={`navbar-${loggedInUser ? 'column' : 'row'}`}>
+            <nav id="navBar" className={`navbar-${loggedInUser || this.props.loggedInUser ? 'column' : 'row'}`}>
                 <a id="a-logo" href="/index.html">
                     <img id="twIcon" className="svg-img" src={logoSvg} alt="logo" />
                 </a>

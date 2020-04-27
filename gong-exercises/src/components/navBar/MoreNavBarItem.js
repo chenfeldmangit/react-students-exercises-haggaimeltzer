@@ -42,7 +42,9 @@ class MoreNavBarItem extends React.Component {
     onLogout = ()=>{
         UserAPI.logout();
         this.hideLogoutModal();
+        localStorage.removeItem("logged-in-user");
         this.props.onLoggedOut();
+        window.location = "./";
     }
 
     render() {

@@ -9,8 +9,8 @@ class MainLayout extends React.Component {
     }
 
     render() {
-        const { loggedInUser } = this.props;
-
+        const loggedInUser = localStorage.getItem("logged-in-user");
+        
         return (
             <div id="mainLayout" className={`layout-${loggedInUser ? 'row' : 'column'}`}>
                 {this.props.children}

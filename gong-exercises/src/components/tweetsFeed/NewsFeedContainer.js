@@ -6,10 +6,15 @@ import '../../css/feed.css';
 import '../../css/tweet_form.css';
 
 export default function NewsFeedContainer(props){
+    const loggedInUser = localStorage.getItem("logged-in-user");
     return (
-        <>
-        <TweetForm/> 
-        <NewsFeed/> 
-        </>
+        loggedInUser
+            ? 
+                <>
+                    <TweetForm/> 
+                    <NewsFeed/> 
+                </>
+            : 
+            null
     );
 }

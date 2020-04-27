@@ -18,7 +18,9 @@ function LoginSignForm(props){
     }, []); */
     
     function onLoggedIn(username){
+        localStorage.setItem("logged-in-user", username);
         props.onLoggedIn(username);
+        window.location = "./";
         //store.dispatch(LoginActions.creatLoggedInAction(username));
     }
 
@@ -37,6 +39,7 @@ function LoginSignForm(props){
                { let ok = await UserAPI.signup(inputs.usernameInput.value, inputs.passwordInput.value);
                     console.log("signup" + (ok? " succeeded" : " failed"));
                     if(ok){
+                        
                     }
                     else{
                         alert("signup failed");
