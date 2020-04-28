@@ -12,8 +12,8 @@ import './css/App.css';
 //import './sass/page.sass'; //makes error Invalid CSS after "...@include layout": expected "}", was ".margin-auto;"
 import './css/page.css';
 
-
 function App() {
+  
   return (
     <BrowserRouter>
       <div className="App">

@@ -7,7 +7,7 @@ export default class NavBarItem extends React.Component {
     };
 
     getName = ()=>{
-      return NavBarAssets.getItemText(this.props.name);
+      return NavBarAssets.getItemText(this.props.name) + ((this.props.count && this.props.count>0)? `(${this.props.count})` : "");
   };
 
   getRef = ()=>{
@@ -27,7 +27,7 @@ export default class NavBarItem extends React.Component {
               :
               null
             }
-            <span className="navitem-text"> {this.props.name} </span>
+            <span className="navitem-text"> {this.getName()} </span>
         </a>
       );
     }

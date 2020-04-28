@@ -11,6 +11,7 @@ $profile-diameter: 3.5em;
     margin-right: 1px;
     padding: $feed-padding;
     justify-content: space-evenly;
+    text-align: left;
 
     .notification-avatars{
         @include layout.flexRow;
@@ -28,7 +29,7 @@ $profile-diameter: 3.5em;
         color: color.$text-color;
         text-decoration: none;
         font-weight: bold;
-        text-align: left;
+       
     }
 
 }

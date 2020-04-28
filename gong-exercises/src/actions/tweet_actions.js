@@ -19,7 +19,7 @@ export default class TweetActions{
 
     static tweetLikedAction(tweet) {
         return {
-            type: TweetActions.RELOAD_TWEETS,
+            type: TweetActions.TWEET_LIKED,
             tweetData: tweet
         }
     };

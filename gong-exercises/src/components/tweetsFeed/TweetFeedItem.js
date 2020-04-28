@@ -2,30 +2,37 @@ import React, {useState } from 'react';
 import TweetsApi from '../../db/TweetsAPI'
 import CommentIcon from '../../assets/comment_icon.svg'
 import RetweetIcon from '../../assets/retweet_icon.svg'
-import LkeIcon from '../../assets/like_icon.svg'
+import LikeIcon from '../../assets/like_icon.svg'
+import LikedIcon from '../../assets/liked_icon.svg'
 import SharetIcon from '../../assets/share_icon.svg'
 
-export default function TweetFeedItem(props){
+import TweetActions from '../../actions/tweet_actions';
+import {connect} from 'react-redux';
+
+function TweetFeedItem(props){
     //const [tweet] = useState({});
-    const {tweetData} = props;
+    const {tweetData, tweetLiked} = props;
        
 
     async function onlike(event){
+        event.preventDefault();
+        console.log("like");
         let like_element = event.target;
          if(tweetData.liked){
+            
             await TweetsApi.removeLike(tweetData.id);
             tweetData.liked = false;
             tweetData.numLikes--;
-            like_element.src = "./assets/like_icon.svg";
+            like_element.src = LikeIcon;
         }
         else{
             await TweetsApi.addLike(tweetData.id);
             tweetData.liked = true;
             tweetData.numLikes++;
-            like_element.src = "./assets/liked_icon.svg";
+            like_element.src = LikedIcon;
         }
-        like_element.closest(".tweet-action").querySelector(".like_counter").textContent = tweetData.numLikes;
-    
+        like_element.closest(".tweet-action").querySelector(".like_counter").textContent = tweetData.numLikes;    
+        tweetLiked(tweetData);
     }
     
     return (
@@ -64,7 +71,7 @@ export default function TweetFeedItem(props){
                 </div>
                 <div className="tweet-action">
                     <div className="tweet-action-icon-container">
-                        <img className="svg-img tweet-action-icon like_icon" src={LkeIcon} onClick={onlike} alt="like" />
+                        <img className="svg-img tweet-action-icon like_icon" src={LikeIcon} onClick={onlike} alt="like" />
                     </div>
                     <div className="tweet-action-counter like_counter"> 0</div>
                 </div>
@@ -78,3 +85,24 @@ export default function TweetFeedItem(props){
         </div>
     );
 }
+
+const mapStateToProps = (state)=>{
+    return { 
+        
+    }
+}
+
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        tweetLiked: tweet=>{
+            dispatch(TweetActions.tweetLikedAction(tweet));
+        },
+    }
+}
+
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(TweetFeedItem);

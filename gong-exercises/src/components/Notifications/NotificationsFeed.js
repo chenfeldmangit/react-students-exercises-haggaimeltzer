@@ -12,11 +12,12 @@ export default function NotificationsFeed(props){
           }
           loadContent();
     }, []);
-
+    
+    let i = 0;
     return (
         <div id="notificationsFeed" className="feed">
            {
-               notifications.map((notification)=> <NotificationItem notificationData={notification} key={notification.id}/>)
+               notifications.map((notification)=> <NotificationItem notificationData={notification} key={i++}/>)
            }
         </div>
     );

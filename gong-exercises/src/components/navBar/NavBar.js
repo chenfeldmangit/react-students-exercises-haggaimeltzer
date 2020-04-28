@@ -8,8 +8,10 @@ import { connect } from 'react-redux';
 class NavBar extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { isLogoutOpen: false };
+        this.state = { isLogoutOpen: false};
     }
+
+    
 
     render() {
         const loggedInUser = localStorage.getItem("logged-in-user");
@@ -23,7 +25,7 @@ class NavBar extends React.Component {
                         <>
                             <NavBarItem name="Home"></NavBarItem>
                             <NavBarItem name="Explore"></NavBarItem>
-                            <NavBarItem name="Notifications"></NavBarItem>
+                            <NavBarItem name="Notifications" count={this.props.notifications_count}></NavBarItem>
                             <NavBarItem name="Messages"></NavBarItem>
                             <NavBarItem name="Bookmarks"></NavBarItem>
                             <NavBarItem name="Lists"></NavBarItem>
@@ -48,6 +50,7 @@ class NavBar extends React.Component {
 const mapStateToProps = (state) => {
     return {
         loggedInUser: state.loggedInUser,
+        notifications_count: state.notifications.length,
     }
 }
 
