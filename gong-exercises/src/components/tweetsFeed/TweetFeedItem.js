@@ -1,5 +1,5 @@
 import React, {useState } from 'react';
-import TweetsApi from '../../db/TweetsAPI'
+//import TweetsApi from '../../db/TweetsAPI'
 import CommentIcon from '../../assets/comment_icon.svg'
 import RetweetIcon from '../../assets/retweet_icon.svg'
 import LikeIcon from '../../assets/like_icon.svg'
@@ -11,13 +11,12 @@ import {connect} from 'react-redux';
 
 function TweetFeedItem(props){
     //const [tweet] = useState({});
-    const {tweetData, tweetLiked} = props;
+    const {tweetData, setLike} = props;
        
 
-    async function onlike(event){
+    async function onlikeClicked(event){
         event.preventDefault();
-        console.log("like");
-        let like_element = event.target;
+        /* let like_element = event.target;
          if(tweetData.liked){
             
             await TweetsApi.removeLike(tweetData.id);
@@ -31,8 +30,8 @@ function TweetFeedItem(props){
             tweetData.numLikes++;
             like_element.src = LikedIcon;
         }
-        like_element.closest(".tweet-action").querySelector(".like_counter").textContent = tweetData.numLikes;    
-        tweetLiked(tweetData);
+        like_element.closest(".tweet-action").querySelector(".like_counter").textContent = tweetData.numLikes;     */
+        setLike(tweetData, !tweetData.liked);
     }
     
     return (
@@ -71,9 +70,9 @@ function TweetFeedItem(props){
                 </div>
                 <div className="tweet-action">
                     <div className="tweet-action-icon-container">
-                        <img className="svg-img tweet-action-icon like_icon" src={LikeIcon} onClick={onlike} alt="like" />
+                        <img className="svg-img tweet-action-icon like_icon" src={tweetData.liked? LikedIcon : LikeIcon} onClick={onlikeClicked} alt="like" />
                     </div>
-                    <div className="tweet-action-counter like_counter"> 0</div>
+        <div className="tweet-action-counter like_counter"> {tweetData.numLikes}</div>
                 </div>
                 <div className="tweet-action">
                     <div className="tweet-action-icon-container">
@@ -95,8 +94,8 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        tweetLiked: tweet=>{
-            dispatch(TweetActions.tweetLikedAction(tweet));
+        setLike: (tweet,like)=>{
+            dispatch(TweetActions.likeTweetAction(tweet, like));
         },
     }
 }

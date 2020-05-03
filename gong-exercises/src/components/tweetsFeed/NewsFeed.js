@@ -16,7 +16,7 @@ function NewsFeed(props){
             setTweets(result);
           }
           loadContent();
-    }, [setTweets]);
+    }, []);
 
     return (
         <div id="newsFeed" className="feed">

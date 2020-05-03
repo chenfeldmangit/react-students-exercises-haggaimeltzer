@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBarAssets from '../../assets/NavBarAssets';
+import { NavLink } from 'react-router-dom'
 
 export default class NavBarItem extends React.Component {
     getIcon = ()=>{
@@ -21,14 +22,14 @@ export default class NavBarItem extends React.Component {
     render() {
       return (
         // eslint-disable-next-line
-        <a className="nav-item" href={this.getRef()} onClick={this.onClicked()}>
+        <NavLink className="nav-item" href={this.getRef()} to={this.getRef()} onClick={this.onClicked()}>
             {this.getIcon()?
               <img className="svg-img nav-icon" src={this.getIcon()} alt={this.getName()}/>
               :
               null
             }
             <span className="navitem-text"> {this.getName()} </span>
-        </a>
+        </NavLink>
       );
     }
   }
